@@ -11,31 +11,6 @@ describe User, type: :model do
       it "全ての項目が正しく入力されてあれば登録できる" do
         expect(@user).to be_valid
       end
-      it "nicknameが1文字以上であれば登録できる" do
-        @user.nickname = "aaaaaa"
-        expect(@user).to be_valid
-      end
-      it "passwordが6文字以上であれば登録できる" do
-        @user.password = "000000"
-        @user.password_confirmation = "000000"
-        expect(@user).to be_valid
-      end
-      it "last_nameが漢字、ひらがな、カタカナのいずれかであれば登録できる" do
-        @user.last_name = "漢字かんじカンジ"
-        expect(@user).to be_valid
-      end
-      it "first_nameが漢字、ひらがな、カタカナのいずれかであれば登録できる" do
-        @user.first_name = "漢字かんじカンジ"
-        expect(@user).to be_valid
-      end
-      it "last_name_kanaがカタカナであれば登録できる" do
-        @user.last_name = "カンジ"
-        expect(@user).to be_valid
-      end
-      it "first_name_kanaがカタカナであれば登録できる" do
-        @user.first_name = "カンジ"
-        expect(@user).to be_valid
-      end      
     end
 
     context '新規登録がうまくいかないとき' do
