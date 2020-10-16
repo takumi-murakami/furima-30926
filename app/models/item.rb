@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   # has_one :order
 
   with_options presence: true do
-    validates :title, :text
+    validates :title, :text, :image
     
     with_options numericality: { other_than: 1 } do
       validates :category_id, :sales_status_id, :shipping_fee_status_id, :prefecture_id, :scheduled_delivery_id
