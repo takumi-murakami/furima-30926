@@ -77,7 +77,7 @@ describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be greater than 300")
       end
-      it 'priceが9999999より少ないと登録できない' do
+      it 'priceが9999999より多いと登録できない' do
         @item.price = "10000000"
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be less than 9999999")
