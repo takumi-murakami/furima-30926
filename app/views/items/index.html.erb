@@ -181,22 +181,9 @@
   <%# /商品一覧 %>
 </div>
 <div class='purchase-btn'>
-  <% if user_signed_in? %> 
     <%= link_to new_item_path, class: "purchase-btn-text" do %>
     <p>出品する</p>
     <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
     <% end %>
-  <% else %>
-    <%= link_to new_user_registration_path, class: "purchase-btn-text" do %>
-    <p>出品する</p>
-    <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-    <% end %>
-  <% end %>
 </div>
-<%# <div class='purchase-btn'>
-  <span class='purchase-btn-text'>出品する</span>
-  <a href="#">
-    <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-  <%# </a>
-</div> %> 
 <%= render "shared/footer" %>
