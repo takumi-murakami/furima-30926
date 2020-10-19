@@ -8,7 +8,6 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipping_fee_status
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :scheduled_delivery
-  # has_one :order
 
   with_options presence: true do
     validates :title, :text, :image
