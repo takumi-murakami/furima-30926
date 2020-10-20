@@ -9,7 +9,6 @@ class ItemOrder
   end
 
     def save
-      # item = Item.create(title: title, price: price, image: image)
       Address.create(postal_code: postal_code, prefecture_id: prefecture_id, city_name: city_name, block_name: block_name, building_name: building_name, phone_number: phone_number)
       Order.create(user_id: user_id, item_id: item_id)
     end
