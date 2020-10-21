@@ -17,17 +17,17 @@ RSpec.describe ItemOrder, type: :model do
       it '郵便番号が空だと購入ができない' do
         @item_order.postal_code = ""
         @item_order.valid?
-        expect(@item_order.errors.messages).to include({:postal_code=>["can't be blank", "is invalid"]})
+        expect(@item_order.errors.messages).to include({:postal_code => ["can't be blank", "is invalid", "is the wrong length (should be 8 characters)"]})
       end
       it '郵便番号にハイフンがないと登録できない' do
-        @item_order.postal_code = "1234567"
+        @item_order.postal_code = "12345678"
         @item_order.valid?
         expect(@item_order.errors.full_messages).to include("Postal code is invalid")
       end
-      it '郵便番号が8桁出ないと購入できない' do
-        @item_order.postal_code = "123-45678"
+      it '郵便番号が8桁でないと購入できない' do
+        @item_order.postal_code = "123-458"
         @item_order.valid?
-        expect(@item_order.errors.full_messages).to include("Postal code is invalid")
+        expect(@item_order.errors.full_messages).to include("Postal code is invalid", "Postal code is the wrong length (should be 8 characters)")
       end
       it 'prefecture_idが空だと購入できない' do
         @item_order.prefecture_id = nil
