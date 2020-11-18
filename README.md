@@ -4,6 +4,14 @@
 # App URL
 https://furima-30926.herokuapp.com/
 
+<br>
+<details><summary>ログイン用認証キー</summary><div>
+  
+  user_id: admin  
+  password: murakami30926
+  
+</div></details>
+
 
 # テーブル設計
 
