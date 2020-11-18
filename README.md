@@ -1,7 +1,8 @@
 # Furima 
 フリマアプリのコピーサイト作成
 
-
+# App URL
+https://furima-30926.herokuapp.com/
 
 
 # テーブル設計
